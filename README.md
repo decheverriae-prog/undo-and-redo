@@ -63,4 +63,26 @@ py -3 -m pytest tests -v
 
 ## Nota sobre el informe en PDF
 
-El texto listo para copiar al entregable en PDF está en [`docs/INFORME_PDF.md`](docs/INFORME_PDF.md). Complete el **enlace de Google Drive** del video y exporte a PDF; el enlace de GitHub ya figura allí y en este README (ajístelo si el nombre del repo en GitHub no coincide con `deshacer-y-rehacer`).
+El texto listo para copiar al entregable en PDF está en [`docs/INFORME_PDF.md`](docs/INFORME_PDF.md). Complete el **enlace de Google Drive** del video y exporte a PDF; el enlace de GitHub ya figura allí y en este README (ajústelo si el nombre del repo en GitHub no coincide con `deshacer-y-rehacer`).
+
+## Publicar en GitHub
+
+1. Inicie sesión en GitHub con la cuenta correcta.
+2. **Cree el repositorio vacío** en la web: **New repository** → nombre `deshacer-y-rehacer` → **Public** → **sin** marcar “Add a README” (el proyecto ya trae archivos).
+3. Compruebe en el navegador que abre sin error:  
+   `https://github.com/TU_USUARIO/deshacer-y-rehacer`  
+   Si da **404**, el repo **aún no existe** o el **usuario** no coincide con `TU_USUARIO`.
+4. En la carpeta del proyecto:
+
+```powershell
+git remote set-url origin https://github.com/TU_USUARIO/deshacer-y-rehacer.git
+git push -u origin main
+```
+
+(Sustituya `TU_USUARIO` por su nombre de usuario real de GitHub.)
+
+### Si aparece *Repository not found*
+
+- El repositorio **no se ha creado** en esa cuenta, o el nombre/usuario está **mal escrito** (GitHub distingue mayúsculas solo en la URL mostrada; lo importante es que usuario y repo existan).
+- Está intentando subir a **otra cuenta** distinta de la que tiene abierta en el navegador al crear el repo.
+- Corrija el remoto: `git remote set-url origin https://github.com/USUARIO_CORRECTO/NOMBRE_REPO.git` y vuelva a hacer `git push -u origin main`.
