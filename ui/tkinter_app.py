@@ -17,7 +17,7 @@ class UndoRedoTkApp:
     def __init__(self) -> None:
         self._system = UndoRedoSystem(initial_state="")
         self._root = tk.Tk()
-        self._root.title("Deshacer y rehacer — Deque propia")
+        self._root.title("Undo and redo — custom Deque")
         self._root.minsize(640, 480)
 
         main = ttk.Frame(self._root, padding=10)
@@ -37,8 +37,8 @@ class UndoRedoTkApp:
         ttk.Button(btn_row, text="Registrar acción", command=self._on_register).pack(
             side=tk.LEFT, padx=(0, 6)
         )
-        ttk.Button(btn_row, text="Deshacer", command=self._on_undo).pack(side=tk.LEFT, padx=(0, 6))
-        ttk.Button(btn_row, text="Rehacer", command=self._on_redo).pack(side=tk.LEFT)
+        ttk.Button(btn_row, text="Undo", command=self._on_undo).pack(side=tk.LEFT, padx=(0, 6))
+        ttk.Button(btn_row, text="Redo", command=self._on_redo).pack(side=tk.LEFT)
 
         ttk.Label(main, text="Historial (más antiguo → más reciente)").grid(
             row=5, column=0, sticky=tk.W, pady=(8, 0)
@@ -103,7 +103,7 @@ class UndoRedoTkApp:
     def _on_undo(self) -> None:
         ok = self._system.undo()
         if not ok:
-            messagebox.showinfo("Deshacer", self._system.get_last_error() or "")
+            messagebox.showinfo("Undo", self._system.get_last_error() or "")
             self._set_status(False, self._system.get_last_error())
         else:
             self._set_status(True, None)
@@ -112,7 +112,7 @@ class UndoRedoTkApp:
     def _on_redo(self) -> None:
         ok = self._system.redo()
         if not ok:
-            messagebox.showinfo("Rehacer", self._system.get_last_error() or "")
+            messagebox.showinfo("Redo", self._system.get_last_error() or "")
             self._set_status(False, self._system.get_last_error())
         else:
             self._set_status(True, None)

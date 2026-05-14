@@ -1,4 +1,4 @@
-# Entregable — Deshacer y rehacer (Deque propia)
+# Entregable — Undo and redo (Deque propia)
 
 **Autor(es):** *[Indique nombres]*  
 **Asignatura / fecha:** *[Indique]*  
@@ -63,8 +63,8 @@ Se usó **interfaz gráfica con Tkinter** (ventana con campos de texto, botones 
 
 **Enlace (sustituya tras crear el repositorio y hacer push):**
 
-- **Repositorio:** `https://github.com/decheverriae-prog/deshacer-y-rehacer`  
-  *(Nombre del proyecto: **Deshacer y rehacer**; cuenta de GitHub: **decheverriae-prog**. En GitHub el nombre del repo suele ir sin espacios, por ejemplo `deshacer-y-rehacer`. Si al crearlo usó otro nombre, actualice esta URL.)*
+- **Repositorio:** `https://github.com/decheverriae-prog/undo-and-redo`  
+  *(Nombre del proyecto: **Undo and redo**; cuenta de GitHub: **decheverriae-prog**. En GitHub el nombre del repo suele ir sin espacios, por ejemplo `undo-and-redo`. Si al crearlo usó otro nombre, actualice esta URL.)*
 
 ---
 
